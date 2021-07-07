@@ -1,0 +1,46 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.seat-grid {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.row {
+  flex: 1;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.row:first-child {
+  margin-top: 0;
+}
+
+.seat {
+  border: 1px solid;
+  border-radius: 6px;
+  flex: 0 1 10rem;
+  padding: 1rem;
+  margin-left: 1rem;
+  text-align: center;
+}
+
+.seat:first-child {
+  margin-left: 0;
+}
+
+.seat.seat--booked {
+  background: #ddd;
+}
+
+button {
+  cursor: pointer;
+}
