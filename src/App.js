@@ -63,7 +63,7 @@ function App() {
       });
     }
     return (
-      <div className={`seat ${booked && "seat--booked"}`}>
+      <div className={`seat ${booked ? "seat--booked" : ""}`}>
         <h2>Seat #{seatId}</h2>
         <p>{booked ? "Booked!" : "Available!"}</p>
         <button onClick={bookSeat}>Book Seat</button>
@@ -73,6 +73,7 @@ function App() {
 
   return (
     <div className="seat-grid">
+      <h1>ticketnovice.com</h1>
       {seating.map((row, idx) => (
         <Row key={idx} row={row} />
       ))}
